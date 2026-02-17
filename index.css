@@ -1,0 +1,356 @@
+/* =========================
+   FUENTES
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #070b16;
+    color: #e6e9ff;
+    min-height: 100vh;
+    line-height: 1.7;
+}
+
+/* =========================
+   HEADER
+========================= */
+header{
+    background:linear-gradient(180deg,#0b1024,#070b16);
+    padding:2.5rem 1rem;
+    text-align:center;
+    border-bottom:1px solid #1c2340;
+}
+
+header h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg,#ffd700,#8f9bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p{
+    margin-top:.5rem;
+    color:#c3c9ff;
+    font-size:.95rem;
+    opacity:.85;
+}
+
+/* =========================
+   MENÚ
+========================= */
+.moon-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #0b1024;
+    padding: 18px 0;
+}
+
+.moon-nav a {
+    color: #cfd4ff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.moon-nav a:hover {
+    color: #ffd700;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+section{
+    max-width:950px;
+    margin:auto;
+    padding:3.5rem 1.5rem;
+}
+
+section h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color:#aab2ff;
+    margin-bottom:1.2rem;
+}
+
+section p{
+    margin-bottom:1rem;
+    opacity:.95;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+.card{
+    position:relative;
+    background:linear-gradient(145deg,#12183a,#0b1024);
+    border-radius:14px;
+    padding:1.6rem;
+    margin-top:1.6rem;
+    overflow:hidden;
+    box-shadow:0 0 18px rgba(110,120,255,.15);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 0 28px rgba(120,130,255,.35);
+}
+
+.card h3{
+    color:#9aa4ff;
+    margin-bottom:.6rem;
+}
+
+.card p{
+    font-size:.95rem;
+}
+
+/* Borde animado */
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:14px;
+    padding:1px;
+    background:linear-gradient(45deg,#6f7bff,#ffd700);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,
+                 linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    pointer-events:none;
+}
+
+/* =========================
+   BOTONES
+========================= */
+button,.btn{
+    margin-top:1.3rem;
+    padding:11px 26px;
+    background:transparent;
+    color:#aab2ff;
+    border:1px solid #6f7bff;
+    border-radius:18px;
+    cursor:pointer;
+    font-family:inherit;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    transition:.35s;
+}
+
+button:hover,.btn:hover{
+    background:linear-gradient(90deg,#ffd700,#8f9bff);
+    color:#070b16;
+    box-shadow:0 0 18px rgba(255,215,0,.7);
+    transform:scale(1.07);
+}
+
+/* =========================
+   BANNER
+========================= */
+.moon-banner{
+    width:100%;
+    height:350px;
+    position:relative;
+    overflow:hidden;
+}
+
+.moon-banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.6) contrast(1.1);
+    transition:.6s;
+}
+
+.moon-banner:hover img{
+    transform:scale(1.05);
+}
+
+.moon-banner::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.2),
+        rgba(7,11,22,.85)
+    );
+}
+
+/* =========================
+   IMÁGENES DE SECCIÓN
+========================= */
+.section-image{
+    display: block;
+    margin: 35px auto;
+    width: 75%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(120,130,255,.25);
+    transition: .4s ease;
+}
+
+.section-image:hover{
+    transform: scale(1.02);
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+.hidden{
+    opacity:0;
+    transform:translateY(25px);
+    transition:.7s;
+}
+
+.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   ALERTAS
+========================= */
+.moon-welcome,
+.moon-alert{
+    background:linear-gradient(145deg,#141b44,#0b1024);
+    color:#e6e9ff;
+    border-radius:18px;
+    box-shadow:0 0 22px rgba(120,130,255,.45);
+    z-index:9999;
+}
+
+.moon-welcome{
+    position:fixed;
+    top:22px;
+    left:50%;
+    transform:translateX(-50%) translateY(-25px);
+    padding:18px 28px;
+    text-align:center;
+    opacity:0;
+    transition:.6s;
+}
+
+.moon-welcome.show{
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
+}
+
+.moon-alert{
+    position:fixed;
+    bottom:28px;
+    right:28px;
+    padding:18px 24px;
+    max-width:320px;
+    opacity:0;
+    transform:translateY(25px);
+    transition:.5s;
+}
+
+.moon-alert.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+    background:#070b16;
+    border-top:1px solid #1c2340;
+    text-align:center;
+    padding:1.3rem;
+    font-size:.85rem;
+    color:#9aa4ff;
+    opacity:.9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:1024px){
+    section{
+        padding:3rem 1.2rem;
+    }
+
+    header h1{
+        font-size:2.2rem;
+    }
+}
+
+@media (max-width:768px){
+
+    header h1{
+        font-size:1.8rem;
+        letter-spacing:1px;
+    }
+
+    header p{
+        font-size:.85rem;
+    }
+
+    .moon-nav{
+        flex-direction:column;
+        gap:15px;
+        padding:20px 0;
+    }
+
+    .moon-nav a{
+        font-size:15px;
+    }
+
+    section{
+        padding:2.5rem 1rem;
+    }
+
+    .card{
+        padding:1.2rem;
+    }
+
+    .section-image{
+        width:90%;
+        max-width:100%;
+    }
+}
+
+@media (max-width:480px){
+
+    header h1{
+        font-size:1.5rem;
+    }
+
+    section h2{
+        font-size:1.2rem;
+    }
+
+    .card h3{
+        font-size:1rem;
+    }
+}
